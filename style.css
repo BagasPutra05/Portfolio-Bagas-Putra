@@ -268,3 +268,181 @@ body {
     font-weight: bold;
     color: #000000;
 }
+
+.hero_images-box {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+.hero_images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 275px);
+    width: 650px;
+    height: fit-content;
+    padding-block: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.work_brand {
+    position: relative;
+    top: 60px;
+    height: 220px;
+    overflow: hidden; /* Ini bagian terpenting untuk menyembunyikan logo */
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.skill_container {
+    height: 220px;
+}
+
+.address_images {
+    position: relative;
+    top: 60px;
+    border-radius: 10px;
+}
+
+.address_images img {
+    border-radius: 10px;
+}
+
+.address_title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+.address_subtitle {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: gray;
+}
+
+.profile_pictures {
+    position: relative;
+    top: 60px;
+}
+
+.profile_picture {
+    border-radius: 10px;
+}
+
+.work_brand_images {
+    position: relative;
+    top: 80px;
+}
+
+.scrolling_content {
+    position: relative;
+    top: 40px;
+    display: flex;
+    align-items: center; /* Membuat logo sejajar di tengah secara vertikal */
+    width: 200%; /* Lebar 2x lipat untuk menampung duplikasi logo */
+
+    /* Menerapkan animasi */
+    animation: scrollLeft 10s infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        /* Posisi awal */
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        /* Bergerak ke kiri sejauh setengah dari total lebar (.scrolling-content) */
+        transform: translateX(0);
+    }
+}
+
+.scrolling_content img {
+    height: 30px;  /* Menyamakan tinggi logo */
+    margin: 0 20px; /* Memberi jarak antar logo */
+    flex-shrink: 0;
+}
+
+.work_box_title {
+    font-size: 1rem;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.skill_container {
+    position: relative;
+    top: 60px;
+    height: fit-content;
+    overflow: hidden; /* Ini bagian terpenting untuk menyembunyikan logo */
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.skill_top {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.skill_top .skill_box {
+    margin-inline: 10px;
+}
+
+.skill_title {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.skill_box {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.skill_box img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.skill_bottom {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    row-gap: 10px;
+    column-gap: 25px;
+}
