@@ -83,9 +83,10 @@ body {
     position: relative;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 32px 2px rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.10);
 }
 
 .nav_logo a {
@@ -99,9 +100,10 @@ body {
     display: flex;
     padding: 22px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 32px 2px rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.10);
 }
 
 .menu_list {
@@ -158,9 +160,10 @@ body {
 .login-button {
     padding: 24px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 32px 2px rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.10);
     font-size: 1.25rem;
     font-weight: 400;
 
@@ -169,16 +172,12 @@ body {
 .donate-button {
     padding: 24px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 0 32px 2px rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.10);
     font-size: 1.25rem;
     font-weight: 400;
-}
-
-.donate-button:hover,
-.login-button:hover {
-    backdrop-filter: blur(20px);
 }
 
 .donate-button a,
@@ -275,174 +274,164 @@ body {
     height: 100vh;
 }
 
-.hero_images-container {
+.hero_images-box .container {
     display: grid;
-    grid-template-columns: repeat(2, 275px);
-    width: 650px;
-    height: fit-content;
-    padding-block: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-.work_brand {
-    position: relative;
-    top: 60px;
-    height: 220px;
-    overflow: hidden; /* Ini bagian terpenting untuk menyembunyikan logo */
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px 15px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 10px;
-}
-
-.skill_container {
-    height: 220px;
-}
-
-.address_images {
-    position: relative;
-    top: 60px;
-    border-radius: 10px;
-}
-
-.address_images img {
-    border-radius: 10px;
-}
-
-.address_title {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
-}
-
-.address_subtitle {
-    position: absolute;
-    top: 30px;
-    left: 10px;
-    font-size: 0.8rem;
-    font-weight: normal;
-    color: gray;
-}
-
-.profile_pictures {
-    position: relative;
-    top: 60px;
-}
-
-.profile_picture {
-    border-radius: 10px;
-}
-
-.work_brand_images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 550px;
+    width: 100%;
+    height: 100vh;
     position: relative;
     top: 80px;
 }
 
-.scrolling_content {
+.card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     position: relative;
-    top: 40px;
-    display: flex;
-    align-items: center; /* Membuat logo sejajar di tengah secara vertikal */
-    width: 200%; /* Lebar 2x lipat untuk menampung duplikasi logo */
-
-    /* Menerapkan animasi */
-    animation: scrollLeft 10s infinite;
 }
 
-@keyframes scrollLeft {
-    0% {
-        /* Posisi awal */
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    100% {
-        /* Bergerak ke kiri sejauh setengah dari total lebar (.scrolling-content) */
-        transform: translateX(0);
-    }
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.scrolling_content img {
-    height: 30px;  /* Menyamakan tinggi logo */
-    margin: 0 20px; /* Memberi jarak antar logo */
-    flex-shrink: 0;
+.profile-card {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 }
 
-.work_box_title {
-    font-size: 1rem;
-    left: 10px;
-    top: 10px;
-    font-weight: bold;
-    color: gray;
-    text-transform: uppercase;
+.profile-text {
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
 
-.skill_container {
+.profile-text h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.profile-text p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.anonymous-card {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
     position: relative;
-    top: 60px;
-    height: fit-content;
-    overflow: hidden; /* Ini bagian terpenting untuk menyembunyikan logo */
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px 15px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 10px;
+}
+
+.brands-card {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    background: linear-gradient(135deg, #d3eaff 0%, #aBc4ff 100%);
+    padding: 25px;
+    color: #1f3a5f;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-}
-
-.skill_top {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-}
-
-.skill_top .skill_box {
-    margin-inline: 10px;
-}
-
-.skill_title {
-    width: 80%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #000000;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.skill_box {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.skill_box img {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-}
-
-.skill_bottom {
-    margin-top: 10px;
-    width: 100%;
+    justify-content: space-between;
     position: relative;
+    height: 200px;
+}
+
+.brands-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.logo-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-slider-container:hover .logo-slider {
+    animation-play-state: paused;
+}
+
+.logo-slider {
+    display: flex;
+    width: 200%;
+    animation: scroll 15s linear infinite;
+}
+
+.logo-group {
+    width: 200%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-group img {
+    max-height: 25px;
+    width: auto;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-153%);;
+    }
+}
+
+.skills-card {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skills-title h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #333;
+}
+
+.skills-title i {
+    stroke: #333;
+    stroke-width: 2.5px;
+}
+
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 40px);
-    row-gap: 10px;
-    column-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 240px;
+}
+
+.skills-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
